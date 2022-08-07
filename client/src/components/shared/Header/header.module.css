@@ -1,0 +1,161 @@
+.body {
+  width: 100%;
+  display: flex;
+  padding-inline: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-blue);
+  /* position: fixed; */
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  padding: 1.5rem 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.3rem;
+  font-weight: 500;
+}
+
+.link {
+  color: var(--white);
+  padding: 0 0.2rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  padding: 1.5rem 0;
+}
+
+.link:hover {
+  color: var(--main-green);
+}
+
+.donate {
+  background-color: var(--vivid-orange);
+  padding-inline: 0.4rem;
+  border-radius: 3px;
+}
+
+.donate:hover {
+  box-shadow: 0px 3px 4px rgba(255, 255, 255, 0.521);
+  color: var(--white);
+}
+
+.donate:active {
+  box-shadow: none;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  background: var(--white);
+  color: var(--text-gray-dark);
+  font-weight: 600;
+  width: 12rem;
+  padding-top: 0.3rem;
+  border-top: 3px solid var(--main-green);
+  border-radius: 3px;
+  position: absolute;
+  top: 4.5rem;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+  z-index: -1;
+  transform-origin: top;
+  transform: scaleY(0);
+}
+
+.link:hover .dropdown {
+  opacity: 1;
+  user-select: all;
+  pointer-events: all;
+  z-index: 1;
+  transform-origin: top;
+  transform: scaleY(1);
+  animation: fill 300ms ease-in-out;
+}
+
+@keyframes fill {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.subLink {
+  width: 100%;
+  padding: 0.4rem 0.3rem;
+  text-align: left;
+  border-bottom: 1px solid var(--text-gray-dark);
+  transition: all 0.3s ease-in-out;
+}
+
+.subLink:hover {
+  padding-left: 0.8rem;
+  color: var(--main-green);
+}
+
+.mobileToggle,
+.caret {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mobileToggle,
+  .caret {
+    display: flex;
+  }
+  .body {
+    position: relative;
+  }
+  .nav {
+    position: absolute;
+    flex-direction: column;
+    background-color: var(--dark-blue);
+    width: 100%;
+    left: 0;
+    gap: 1rem;
+    top: 4rem;
+    transition: all 700ms ease-in-out;
+  }
+  .link {
+    padding: 0;
+    text-align: left;
+    padding: 0.5rem 0.8rem;
+    font-size: 1.3rem;
+    width: 100%;
+  }
+  .donate {
+    text-align: center;
+  }
+  .dropdown {
+    position: static;
+    margin-left: 2rem;
+    width: 90%;
+    display: none;
+  }
+  .link:hover .dropdown {
+    display: flex;
+  }
+  .caret {
+    position: absolute;
+    top: 0.5rem;
+    right: 2rem;
+  }
+  .show {
+    top: 4rem;
+  }
+  .hide {
+    top: -50rem;
+  }
+}
