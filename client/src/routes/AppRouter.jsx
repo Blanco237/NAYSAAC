@@ -1,14 +1,16 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from '../components/shared/Header/Header'
 
 import { routes } from './Routes'
 
 const AppRouter = () => {
 
-    const temp = <div style={{width:'100vw',height:'100vh'}}>Coming Soon</div>
+    const temp = <div style={{width:'100%',height:'100vh'}}>Coming Soon</div>
 
   return (
     <Router>
+        <Header />
         <Routes>
         {
             routes.map((route,key) => {

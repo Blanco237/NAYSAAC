@@ -7,7 +7,7 @@
   --text-gray: #777;
   --text-gray-dark: #333;
   --text-light-gray: #e3e3e3;
-  --very-dark-blue: rgba(33,33,45,1);
+  --dark-blue: rgba(33,33,45,1);
   --black: #000000;
   --white: #fff;
   --vivid-red: #cf2e2e;
@@ -99,14 +99,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* outline: 1px solid green; */
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
 
 body {
   margin: 0;
   font-family: 'Overpass', 'Roboto',  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
   padding: 0;
 }
 
