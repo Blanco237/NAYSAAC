@@ -1,9 +1,10 @@
+import { lazy } from 'react';
 import { paths } from './Paths'
 
 export const routes = [
     {
         path: paths.LANDING,
-        // component: () => import(/* webpackChunkName: "landing" */ './Landing'),
+        element: lazy(() => import('../pages/Home/Home')),
         exact: true,
     },
     {

@@ -70,7 +70,6 @@
   pointer-events: none;
   z-index: -1;
   transform-origin: top;
-  transform: scaleY(0);
 }
 
 .link:hover .dropdown {
