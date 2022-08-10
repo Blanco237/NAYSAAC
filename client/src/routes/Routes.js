@@ -10,16 +10,17 @@ export const routes = [
     {
         path: paths.ABOUT,
         // component: () => import(/* webpackChunkName: "about" */ './About'),
-        exact: true,
     },
     {
         path: paths.SERVICES,
         // component: () => import(/* webpackChunkName: "services" */ './Services'),
+        element: lazy(() => import('../pages/Home/Home')),
         exact: true,
     },
     {
         path: paths.EVENTS,
         // component: () => import(/* webpackChunkName: "events" */ './Events'),
+        element: lazy(() => import('../pages/Home/Home')),
         exact: true,
     },
     {
