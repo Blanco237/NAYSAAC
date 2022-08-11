@@ -1,4 +1,4 @@
-import planting from './earth-growing-together.jpg'
+import planting from './growing.jpg'
 import globe from './earth-globe.jpg';
 import growth from './earth-growth.jpg';
 import lake from './earth-lake.jpg';
