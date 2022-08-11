@@ -7,14 +7,22 @@ import { headerLinks } from "../../../utils/Links";
 
 import { Divide as Harmburger } from "hamburger-react";
 import { FaCaretDown } from "react-icons/fa";
+import useScroll from "../../../utils/hooks/useScroll";
 
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
+  const position = useScroll();
+
+  React.useEffect(() => {
+    console.log(position);
+  }, [position]);
+  
+
   const hide = () => setIsOpen(false);
 
   return (
-    <header className={styles.body}>
+    <header className={`${styles.body} ${position>=65? styles.white : ''}`}>
       <div className={styles.logo}>NAYSAAC</div>
       <nav>
         <ul className={`${styles.nav} ${isOpen ? styles.show : styles.hide}`}>
@@ -56,7 +64,7 @@ const Header = () => {
         </ul>
       </nav>
       <div className={styles.mobileToggle}>
-        <Harmburger rounded color="#fff" toggle={setIsOpen} toggled={isOpen} />
+        <Harmburger rounded color={`${position>=65? '#21212d': '#fff' }`} toggle={setIsOpen} toggled={isOpen} />
       </div>
     </header>
   );
