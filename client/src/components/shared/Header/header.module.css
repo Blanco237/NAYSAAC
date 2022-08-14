@@ -134,7 +134,7 @@
     display: flex;
   }
   .body {
-    position: relative;
+    position: fixed;
   }
   .nav {
     position: absolute;

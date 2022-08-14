@@ -12,12 +12,7 @@ import useScroll from "../../../utils/hooks/useScroll";
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
-  const position = useScroll();
-
-  React.useEffect(() => {
-    console.log(position);
-  }, [position]);
-  
+  const position = useScroll();  
 
   const hide = () => setIsOpen(false);
 

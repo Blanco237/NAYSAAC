@@ -1,4 +1,13 @@
 .body {
     min-height: 150vh;
     background: var(--text-light-gray);
+    display: flex; 
+    flex-direction: column;
+    gap: 8rem;
+}
+
+@media  screen and (max-width: 768px) {
+    .body {
+        gap: 2rem;
+    }
 }

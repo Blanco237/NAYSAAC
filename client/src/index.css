@@ -131,11 +131,6 @@ button {
   box-shadow: 0px 0px 5px 0px var(--shadow-color, rgba(0, 0, 0, 0.75));
 }
 
-
-#root {
-  padding-top: 78px;
-}
-
 .selected .my-carousel * {
   transform-origin: center;
     animation: fillIn 800ms ease-in-out;
