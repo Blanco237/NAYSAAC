@@ -1,0 +1,86 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 2.5rem 2rem;
+  background-color: var(--white);
+  border-radius: 10px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.person {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.avatar {
+  width: 20%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.details h2 {
+  color: var(--main-green);
+}
+
+.body p {
+  color: var(--dark-blue);
+  font-size: 0.9rem;
+}
+
+.quote {
+  position: absolute;
+  bottom: 1rem;
+  right: 5rem;
+  color: var(--text-light);
+  z-index: -1;
+  font-size: 3.5rem;
+  font-weight: 900;
+  transform: rotate(-45deg);
+  transition: color 0.3s ease-in-out;
+}
+
+.body:hover .quote {
+  color: var(--main-green);
+}
+
+
+.body::before, .body::after {
+    content:'';
+    position: absolute;
+    aspect-ratio: 3/1;
+    width: 10rem;
+    border-radius: 30px;
+    background-color: var(--main-green);
+}
+
+.body::before {
+    top: -2rem;
+    left: -4rem;
+}
+
+.body::after {
+    bottom: -2rem;
+    right: -4rem;
+}
+
