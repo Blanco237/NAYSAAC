@@ -1,5 +1,7 @@
 import { paths } from '../routes/Paths'
 
+import { FaFacebookF, FaTwitter, FaInstagram} from 'react-icons/fa'
+
 export const headerLinks = [
     {
         name: "Home",
@@ -10,12 +12,12 @@ export const headerLinks = [
         path: paths.ABOUT,
         dropdown: [
             {
-                name: "Campaigns",
-                path: `${paths.ABOUT}#campaigns`
+                name: "Who We Are",
+                path: `${paths.ABOUT}`
             },
             {
-                name: "Who We Are",
-                path: `${paths.ABOUT}#who-we-are`
+                name: "Campaigns",
+                path: `${paths.ABOUT}#campaigns`
             },
             {
                 name: "Our History",
@@ -59,6 +61,64 @@ export const headerLinks = [
         name: "Donate",
         path: paths.DONATE,
     }
-
-
 ]
+
+export const footerLinks = {
+    Social: [
+        {
+            name: "Facebook",
+            icon: <FaFacebookF />,
+            path: "https://www.facebook.com/",
+        },
+        {
+            name: "Twitter",
+            icon: <FaTwitter />,
+            path: "https://www.twitter.com/",
+        },
+        {
+            name: "Instagram",
+            icon: <FaInstagram />,
+            path: "https://www.instagram.com/",
+        }
+    ],
+    QuickLinks:  [
+            {
+                name: "Home",
+                path: paths.LANDING,
+            },
+            {
+                name: "About",
+                path: paths.ABOUT,
+            },
+            {
+                name: "Services",
+                path: paths.SERVICES,
+            },
+            {
+                name: "Events",
+                path: paths.EVENTS,
+            },
+            {
+                name: "Contact",
+                path: paths.CONTACT,
+            },
+            {
+                name: "Donate",
+                path: paths.DONATE,
+            }
+        ],
+    Blog: [
+            {
+                name: 'Technology can help Save Our Environment',
+                path: '#',
+            },
+            {
+                name: 'Technology can help Save Our Environment',
+                path: '#',
+            },
+            {
+                name: 'Technology can help Save Our Environment',
+                path: '#',
+            },
+        ]
+    }

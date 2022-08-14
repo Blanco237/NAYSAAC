@@ -1,0 +1,123 @@
+.body {
+    display: flex;
+    min-height: 80vh;
+    padding: 2.5rem 6vw;
+    background-color: var(--dark-blue);
+    gap: 1.5rem;
+}
+
+.body section {
+    width: 25%;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.body hr {
+    width: 10%;
+    background-color: var(--main-green);
+    color: var(--main-green);
+    height: 4px;
+    border: none;
+    border-radius: 3px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--white);
+}
+
+.social {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.social .link {
+    background-color: var(--main-green);
+    aspect-ratio: 1/1;
+    width: 2.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 5px ;
+    font-size: large;
+    color: var(--white);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.social .link:hover {
+    background-color: var(--text-gray-dark);
+}
+
+.quickLinks, .blog, .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.links span {
+    color: var(--main-green);
+}
+
+.quickLinks .link {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+    color: var(--main-green);
+}
+
+.contact input {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bluish-gray);
+    color: var(--dark-blue);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact button {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-green);
+    color: var(--white);
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+    transition: background-color 0.3s ease-in-out;
+    align-self: flex-start;
+    border-radius: 20px;
+    --shadow-color: rgba(121, 112, 112, 0.425);
+}
+
+.contact button:hover {
+    background-color: var(--text-gray-dark);
+}
+
+@media  screen and (max-width: 768px) {
+    .body {
+        flex-direction: column;
+    }
+    .body section {
+        width: 100%;
+    }
+}
