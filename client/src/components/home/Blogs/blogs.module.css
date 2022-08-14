@@ -1,0 +1,32 @@
+.body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 6vw;
+}
+
+.body hr {
+    width: 20%;
+    background-color: var(--main-green);
+    color: var(--main-green);
+    height: 4px;
+    border: none;
+    border-radius: 3px;
+}
+
+.body h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.blogs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    /* padding-inline: 6vw; */
+}
