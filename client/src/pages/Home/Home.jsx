@@ -1,4 +1,7 @@
 import React from 'react'
+
+
+// Components
 import About from '../../components/home/About/About'
 import Carousel from '../../components/home/Carousel/Carousel'
 import SectionOne from '../../components/home/SectionOne/SectionOne'

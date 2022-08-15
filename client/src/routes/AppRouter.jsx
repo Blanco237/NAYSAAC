@@ -2,16 +2,15 @@ import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Footer from '../components/shared/Footer/Footer'
 import Header from '../components/shared/Header/Header'
+import Loader from '../components/shared/Loader/Loader'
 
 import { routes } from './Routes'
 
 const AppRouter = () => {
 
-    const temp = <div style={{width:'100%',height:'100vh'}}>Coming Soon</div>
-
   return (
     <Router>
-      <Suspense fallback={temp}>
+      <Suspense fallback={<Loader />}>
         <Header />
         <Routes>
         {
