@@ -14,13 +14,13 @@ export const routes = [
     {
         path: paths.SERVICES,
         // component: () => import(/* webpackChunkName: "services" */ './Services'),
-        element: lazy(() => import('../pages/Home/Home')),
+        element: lazy(() => import('../pages/Services/Services')),
         exact: true,
     },
     {
         path: paths.EVENTS,
         // component: () => import(/* webpackChunkName: "events" */ './Events'),
-        element: lazy(() => import('../pages/Home/Home')),
+        element: lazy(() => import('../pages/Events/Events')),
         exact: true,
     },
     {
